@@ -56,20 +56,20 @@ export default function Home() {
                 </Link>
               </div>
               <div className="hover:bg-gray-200 max-w-sm text-black outline outline-1 outline-gray-500 dark:text-gray-200 dark:outline-gray-200 dark:hover:bg-gray-800">
-                <a className="w-100 h-100  text-black dark:text-gray-200" href="https://github.com">
+                <Link className="w-100 h-100  text-black dark:text-gray-200" href="/overwatch">
                   <div className="font-bold pl-2 pt-2">Overwatch 2</div>
                   <div className="pl-2 pt-2 pb-2 pr-2">Updated version of the Blizzard's famous chaotic skill set based
                      FPS (still basically the same game tho)
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="hover:bg-gray-200 max-w-sm text-black outline outline-1 outline-gray-500 dark:text-gray-200 dark:outline-gray-200 dark:hover:bg-gray-800">
-                <a className="w-100 h-100  text-black dark:text-gray-200" href="https://github.com">
+                <Link className="w-100 h-100  text-black dark:text-gray-200" href="/maplestory">
                   <div className="font-bold pl-2 pt-2">MapleStory</div>
                   <div className="pl-2 pt-2 pb-2 pr-2">Very old global version of another
                     big Korean MMORPG with 2D graphics
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="hover:bg-gray-200 max-w-sm text-black outline outline-1 outline-gray-500 dark:text-gray-200 dark:outline-gray-200 dark:hover:bg-gray-800">
                 <a className="w-100 h-100  text-black dark:text-gray-200" href="https://github.com">
