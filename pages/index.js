@@ -1,8 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { BsFillMoonFill, BsFillSunFill, BsGithub, ImGithub} from 'react-icons/bs';
+import { BsFillMoonFill, BsFillSunFill, BsGithub,  } from 'react-icons/bs';
+import { FaMoon } from 'react-icons/fa';
+import { IoMoonOutline } from 'react-icons/io5';
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
@@ -20,16 +23,13 @@ export default function Home() {
           <nav className="shadow-xl bg-stone-200 text-xl py-10 px-20 dark:text-white dark:bg-stone-800">
             <div className="flex max-w-2xl justify-between mx-auto">
               <h1 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-green-700 to-green-500 font-bold">Feelsgladman</h1>
-              <ul className="flex items-center gap-5">
-                <li>
+              <div className="flex items-center content-center gap-5">
+                  <Link href="/" className="hover:text-gray-700 dark:hover:text-gray-200">Home</Link>
                   <button onClick={() => setDarkMode(!darkMode)} className="cursor-pointer">
-                    <BsFillMoonFill size='1.5em'/>
-                  </button>
-                </li>
-                <li>
-                  <a href="https://github.com/k7inho6" target="_blank"><BsGithub size='2em'/></a>
-                </li>
-              </ul>
+                    <IoMoonOutline size="30"/>
+                  </button>              
+                  <a href="https://github.com/k7inho6" target="_blank"><BsGithub size='30'/></a>
+              </div>
             </div>
           </nav>
 
@@ -50,13 +50,13 @@ export default function Home() {
 
           <div className="grid grid-cols-2 max-w-2xl mx-auto gap-5">
               <div className="hover:bg-gray-200 max-w-sm text-black outline outline-1 outline-gray-500 dark:text-gray-200 dark:outline-gray-200 dark:hover:bg-gray-800">
-                <a href="/home/ian/repos/cs50-homepage/react-homepage/pages/loa.js"className="w-100 h-100  text-black dark:text-gray-200" target="_blank">
+                <Link href="/loa" className="w-100 h-100  text-black dark:text-gray-200">
                   <div className="font-bold pl-2 pt-2">Lost Ark</div>
                   <div className="pl-2 pt-2 pb-2 pr-2">The recently launched global version of a big Korean MMORPG</div>
-                </a>
+                </Link>
               </div>
               <div className="hover:bg-gray-200 max-w-sm text-black outline outline-1 outline-gray-500 dark:text-gray-200 dark:outline-gray-200 dark:hover:bg-gray-800">
-                <a className="w-100 h-100  text-black dark:text-gray-200" href="https://github.com" target="_blank">
+                <a className="w-100 h-100  text-black dark:text-gray-200" href="https://github.com">
                   <div className="font-bold pl-2 pt-2">Overwatch 2</div>
                   <div className="pl-2 pt-2 pb-2 pr-2">Updated version of the Blizzard's famous chaotic skill set based
                      FPS (still basically the same game tho)
@@ -64,7 +64,7 @@ export default function Home() {
                 </a>
               </div>
               <div className="hover:bg-gray-200 max-w-sm text-black outline outline-1 outline-gray-500 dark:text-gray-200 dark:outline-gray-200 dark:hover:bg-gray-800">
-                <a className="w-100 h-100  text-black dark:text-gray-200" href="https://github.com" target="_blank">
+                <a className="w-100 h-100  text-black dark:text-gray-200" href="https://github.com">
                   <div className="font-bold pl-2 pt-2">MapleStory</div>
                   <div className="pl-2 pt-2 pb-2 pr-2">Very old global version of another
                     big Korean MMORPG with 2D graphics
@@ -72,7 +72,7 @@ export default function Home() {
                 </a>
               </div>
               <div className="hover:bg-gray-200 max-w-sm text-black outline outline-1 outline-gray-500 dark:text-gray-200 dark:outline-gray-200 dark:hover:bg-gray-800">
-                <a className="w-100 h-100  text-black dark:text-gray-200" href="https://github.com" target="_blank">
+                <a className="w-100 h-100  text-black dark:text-gray-200" href="https://github.com">
                   <div className="font-bold pl-2 pt-2">Guardian Tales</div>
                   <div className="pl-2 pt-2 pb-2 pr-2">Probably my favorite gacha game, quite known with pixelized 2D
                   style (global version)

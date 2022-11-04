@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { BsFillMoonFill, BsFillSunFill, BsGithub, ImGithub} from 'react-icons/bs';
+import { BsFillMoonFill, BsFillSunFill, BsGithub } from 'react-icons/bs';
+import { IoMoonOutline } from 'react-icons/io5';
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
@@ -16,74 +18,48 @@ export default function Home() {
       </Head>
 
       <main className="dark:bg-stone-900">
-        <section className="h-screen">
-          <nav className="shadow-xl bg-stone-200 text-xl py-10 px-20 dark:text-white dark:bg-stone-800">
+        <section className="h-max">
+        <nav className="shadow-xl bg-stone-200 text-xl py-10 px-20 dark:text-white dark:bg-stone-800">
             <div className="flex max-w-2xl justify-between mx-auto">
-              <h1 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-green-700 to-green-500 font-bold">WHOA</h1>
-              <ul className="flex items-center gap-5">
-                <li>
+              <h1 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-green-700 to-green-500 font-bold">Feelsgladman</h1>
+              <div className="flex items-center content-center gap-5">
+                  <Link href="/" className="hover:text-gray-700 dark:hover:text-gray-200">Home</Link>
                   <button onClick={() => setDarkMode(!darkMode)} className="cursor-pointer">
-                    <BsFillMoonFill size='1.5em'/>
-                  </button>
-                </li>
-                <li>
-                  <a href="https://github.com/k7inho6" target="_blank"><BsGithub size='2em'/></a>
-                </li>
-              </ul>
+                    <IoMoonOutline size="30"/>
+                  </button>              
+                  <a href="https://github.com/k7inho6" target="_blank"><BsGithub size='30'/></a>
+              </div>
             </div>
           </nav>
 
           <div className="max-w-2xl flex-column content-center items-center mx-auto">
             <p className="text-black text-md font-bold text-4xl pt-20 pb-5 dark:text-gray-200">
-              Hello, i'm Ian and this is my personal website. 
+              Lost Ark
             </p>
-            <p className="text-black dark:text-gray-200">
-              My hobbies are basically
-              playing my favorite games (which vary from time to time), reading manga, 
-              watching series/anime and wandering away on the multiple internet social media 
-              applications.
+            <p className="text-black dark:text-gray-200 text-xl">
+              Definitely the best MMORPG i've ever played, since there's a lot to do and the progression systems are pretty good (ofc there's RNG involved, but 
+              not in a chaotic way). It's also a pay-to-win game, but you can do just fine without spending, and can even catch up to veteran players, since
+              the game actually rewards you for the effort/time you put in.
             </p>
-            <p className="text-black pt-5 font-bold text-2xl dark:text-gray-200 mb-5">
-              Games i'm playing or currently have interest on:
+            <p className="text-black pt-5 font-bold text-2xl dark:text-gray-200 mb-5 pt-10">
+              Combat
             </p>
-          </div>
-
-          <div className="grid grid-cols-2 max-w-2xl mx-auto gap-5">
-              <div className="hover:bg-gray-200 max-w-sm text-black outline outline-1 outline-gray-500 dark:text-gray-200 dark:outline-gray-200 dark:hover:bg-gray-800">
-                <a className="w-100 h-100  text-black dark:text-gray-200" href="https://github.com" target="_blank">
-                  <div className="font-bold pl-2 pt-2">Lost Ark</div>
-                  <div className="pl-2 pt-2 pb-2 pr-2">The recently launched global version of a big Korean MMORPG</div>
-                </a>
-              </div>
-              <div className="hover:bg-gray-200 max-w-sm text-black outline outline-1 outline-gray-500 dark:text-gray-200 dark:outline-gray-200 dark:hover:bg-gray-800">
-                <a className="w-100 h-100  text-black dark:text-gray-200" href="https://github.com" target="_blank">
-                  <div className="font-bold pl-2 pt-2">Overwatch 2</div>
-                  <div className="pl-2 pt-2 pb-2 pr-2">Updated version of the Blizzard's famous chaotic skill set based
-                     FPS (still basically the same game tho)
-                  </div>
-                </a>
-              </div>
-              <div className="hover:bg-gray-200 max-w-sm text-black outline outline-1 outline-gray-500 dark:text-gray-200 dark:outline-gray-200 dark:hover:bg-gray-800">
-                <a className="w-100 h-100  text-black dark:text-gray-200" href="https://github.com" target="_blank">
-                  <div className="font-bold pl-2 pt-2">MapleStory</div>
-                  <div className="pl-2 pt-2 pb-2 pr-2">Very old global version of another
-                    big Korean MMORPG with 2D graphics
-                  </div>
-                </a>
-              </div>
-              <div className="hover:bg-gray-200 max-w-sm text-black outline outline-1 outline-gray-500 dark:text-gray-200 dark:outline-gray-200 dark:hover:bg-gray-800">
-                <a className="w-100 h-100  text-black dark:text-gray-200" href="https://github.com" target="_blank">
-                  <div className="font-bold pl-2 pt-2">Guardian Tales</div>
-                  <div className="pl-2 pt-2 pb-2 pr-2">Probably my favorite gacha game, quite known with pixelized 2D
-                  style (global version)
-                  </div>
-                </a>
-              </div>
-          </div>  
-
-          <div className="max-w-2xl flex-column content-center items-center mx-auto">
-            <p className="text-black pt-5 font-bold text-2xl dark:text-gray-200 mb-5">
-                Some of my favorite manga:
+            <p className="text-black dark:text-gray-200 text-xl pb-5">
+              Now, what actually makes this game the best MMORPG is it's combat. Of course it also depends on your class but in general, it's
+              very dynamic and feels super fluid and satisfying.
+            </p>
+            <p className="text-black dark:text-gray-200 text-xl pb-10">Here are some nice vids that showcase some of LOA's combat:</p>
+            <p className="text-black dark:text-gray-200 text-ml pb-5">Full footage of one of the main raids played by a deathblade (assassin class)</p>
+            <iframe width="600" height="300" src="https://www.youtube.com/embed/HMeeDrOHprg" title="【Lost Ark】Deathless Inferno Valtan Gate 2 Deathblade MVP POV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            <p className="text-black dark:text-gray-200 text-ml pt-10 pb-5">Montage of various raids played by a berserker on the KR version (warrior class)</p>
+            <iframe width="600" height="300" src="https://www.youtube.com/embed/8f96ksg6j8U" title="[로스트아크] 버서커 매드무비 : 버서커의 최고점" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            <p className="text-black pt-5 font-bold text-2xl dark:text-gray-200 mb-5 pt-10">
+              My own progression
+            </p>
+            <p className="text-black dark:text-gray-200 text-xl pb-5">For those already familiar with the game, i'm a day 1 global launch player
+              , but since i'm pretty casual (and a bad time/resource manager and decision maker), i'm doing just ok with a 1490 +22 mayhem berserker main,
+              1475 +21 EO soulfist alt and an WIP 1445 PS shadowhunter and surge deathblade. Have only cleared Valtan from the Inferno Modes, and should probably
+              put more effort into the game since Brelshaza is coming soon (i prob won't tho).
             </p>
           </div>
         </section>
