@@ -30,10 +30,20 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/maplestory": [
+    "/guardiantales": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/maplestory.js"
+      "static/chunks/pages/guardiantales.js"
+    ],
+    "/loa": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/loa.js"
+    ],
+    "/overwatch": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/overwatch.js"
     ]
   },
   "ampFirstPages": []
