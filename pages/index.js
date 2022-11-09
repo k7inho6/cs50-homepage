@@ -8,6 +8,10 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
 import { Header } from '../components/Header';
+import chainsawman from '../public/imgs/chainsawman.jpg';
+import dandadan from '../public/imgs/dandadan.jpg';
+import oshinoko from '../public/imgs/oshinoko.jpg'
+import yugamikun from '../public/imgs/yugamikun.png';
 
 export default function Home() {
   // const [darkMode, setDarkMode] = useState(true);
@@ -23,7 +27,7 @@ export default function Home() {
       </Head>
 
       <main className="dark:bg-stone-900">
-        <section className="h-screen">
+        <section className="h-max">
           {/* <nav className="shadow-xl bg-stone-200 text-xl py-10 px-20 dark:text-white dark:bg-stone-800">
             <div className="flex max-w-2xl justify-between mx-auto">
               <h1 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-green-700 to-green-500 font-bold">Feelsgladman</h1>
@@ -90,6 +94,25 @@ export default function Home() {
             <p className="text-black pt-5 font-bold text-2xl dark:text-gray-200 mb-5">
                 Some of my favorite manga:
             </p>
+            
+            <div className="grid grid-cols-2 max-w-2xl mx-auto gap-x-5">
+              <div className="h-5/6">
+                <p className="text-black dark:text-gray-200 pb-2">Chainsaw Man, by Tatsuki Fujimoto</p>
+                <Image className="h-full" src={chainsawman} alt="chainsawman-cover"/>
+              </div>
+              <div className="h-5/6">
+                <p className="text-black dark:text-gray-200 pb-2">Dandadan, by Yukinobu Tatsu</p>
+                <Image className="h-full" src={dandadan} alt="dandadan-cover"/>
+              </div>
+              <div className="h-5/6">
+                <p className="text-black dark:text-gray-200 pb-2">Oshi no Ko, by Aka Akasaka</p>
+                <Image className="h-full" src={oshinoko} alt="oshinoko-cover"/>
+              </div>
+              <div className="h-5/6">
+                <p className="text-black dark:text-gray-200 pb-2">Yugami-kun has no friends, by Jun Sakura</p>
+                <Image className="h-full" src={yugamikun} alt="yugamikun-cover"/>
+              </div>
+            </div>
           </div>
         </section>
       </main>
